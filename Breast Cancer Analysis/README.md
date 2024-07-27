@@ -1,0 +1,2 @@
+Compared various Supervised Learning methods' accuracy in predicting a patient's overall survival given tumour info. 
+Also contains a Decision Tool to aid doctors in choosing the optimal treatment in maximising patients' longevity.
