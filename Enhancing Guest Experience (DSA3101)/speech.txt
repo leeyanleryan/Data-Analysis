@@ -1,0 +1,20 @@
+In this section, we are looking to optimize resource allocation, specifically staff allocation, to rides.
+We incorporated factors like peak hours, special events and seasonal variations.
+
+Our idea is simple, use predicted wait times from previous sections to allocate staff as they can cater to guests in the queue, by providing them snacks or entertainment, or process queues faster. 
+This aligns with the business objective of increasing guest satisfaction and revenue.
+An attraction with higher predicted wait time means allocate more staff.
+An attraction with lower predicted wait time means allocate less staff.
+
+Since we are optimizing, not predicting, we cannot use a typical machine learning model.
+Instead, we used Linear Optimization, a mathematical optimization model that minimizes deviation from target allocation.
+Greedy Heuristic, an iterative approach that minimizes total wait time, assuming 1 staff exponentially decreases wait time.
+Linear Optimization doesn’t always provide a feasible solution, hence the greedy method.
+
+On the right are two bar plots. 
+One shows when Linear Optimization allocated more staff to Revenge of the Mummy. 
+The other shows when Greedy Heuristic allocated more staff to Revenge of the Mummy.
+There are more attractions but omitted from the picture.
+
+In deciding allocation,
+We pick the one that allocates more staff to the attraction with highest wait time, as it will follow more closely to the distribution of the attraction vs wait times bar plot.
